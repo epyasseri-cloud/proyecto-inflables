@@ -136,4 +136,4 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-console.log('🎈 Inflables Mágicos - Sistema cargado correctamente');
+console.log(' Inflables Mágicos - Sistema cargado correctamente');
