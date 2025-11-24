@@ -185,6 +185,17 @@
     margin-bottom: 1rem;
 }
 
+.producto-card .btn-small {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+}
+
+.producto-card .btn-small:hover {
+    background-color: #e68900;
+    transform: translateY(-2px);
+}
+
 /* ===== BENEFICIOS ===== */
 .beneficios {
     padding: 4rem 0;
