@@ -593,4 +593,4 @@ function calcularPrecio() {
     return precios[producto] || 0;
 }
 
-console.log('📋 Sistema de reservas con validaciones cargado correctamente');
+console.log(' Sistema de reservas con validaciones cargado correctamente');
