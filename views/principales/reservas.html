@@ -68,21 +68,106 @@
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="nombre">Nombre Completo *</label>
-                                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+                                    <input 
+                                        type="text" 
+                                        id="nombre" 
+                                        name="nombre" 
+                                        required 
+                                        placeholder="Tu nombre completo"
+                                        minlength="3"
+                                        maxlength="50"
+                                        pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+"
+                                        title="Solo letras y espacios">
+                                    <span class="error-message" id="error-nombre"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label for="telefono">Teléfono *</label>
-                                    <input type="tel" id="telefono" name="telefono" required placeholder="(55) 1234-5678">
+                                    <label for="telefono">Teléfono (10 dígitos) *</label>
+                                    <input 
+                                        type="tel" 
+                                        id="telefono" 
+                                        name="telefono" 
+                                        required 
+                                        placeholder="5512345678"
+                                        pattern="[0-9]{10}"
+                                        minlength="10"
+                                        maxlength="10"
+                                        title="Ingresa 10 dígitos sin espacios">
+                                    <span class="error-message" id="error-telefono"></span>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="email">Email *</label>
-                                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email" 
+                                        required 
+                                        placeholder="tu@email.com"
+                                        maxlength="100">
+                                    <span class="error-message" id="error-email"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label for="ciudad">Ciudad *</label>
-                                    <input type="text" id="ciudad" name="ciudad" required placeholder="Ciudad de México">
+                                    <label for="estado">Estado *</label>
+                                    <select id="estado" name="estado" required>
+                                        <option value="">Selecciona un estado</option>
+                                        <option value="aguascalientes">Aguascalientes</option>
+                                        <option value="baja-california">Baja California</option>
+                                        <option value="baja-california-sur">Baja California Sur</option>
+                                        <option value="campeche">Campeche</option>
+                                        <option value="chiapas">Chiapas</option>
+                                        <option value="chihuahua">Chihuahua</option>
+                                        <option value="ciudad-de-mexico" selected>Ciudad de México</option>
+                                        <option value="coahuila">Coahuila</option>
+                                        <option value="colima">Colima</option>
+                                        <option value="durango">Durango</option>
+                                        <option value="estado-de-mexico">Estado de México</option>
+                                        <option value="guanajuato">Guanajuato</option>
+                                        <option value="guerrero">Guerrero</option>
+                                        <option value="hidalgo">Hidalgo</option>
+                                        <option value="jalisco">Jalisco</option>
+                                        <option value="michoacan">Michoacán</option>
+                                        <option value="morelos">Morelos</option>
+                                        <option value="nayarit">Nayarit</option>
+                                        <option value="nuevo-leon">Nuevo León</option>
+                                        <option value="oaxaca">Oaxaca</option>
+                                        <option value="puebla">Puebla</option>
+                                        <option value="queretaro">Querétaro</option>
+                                        <option value="quintana-roo">Quintana Roo</option>
+                                        <option value="san-luis-potosi">San Luis Potosí</option>
+                                        <option value="sinaloa">Sinaloa</option>
+                                        <option value="sonora">Sonora</option>
+                                        <option value="tabasco">Tabasco</option>
+                                        <option value="tamaulipas">Tamaulipas</option>
+                                        <option value="tlaxcala">Tlaxcala</option>
+                                        <option value="veracruz">Veracruz</option>
+                                        <option value="yucatan">Yucatán</option>
+                                        <option value="zacatecas">Zacatecas</option>
+                                    </select>
+                                    <span class="error-message" id="error-estado"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="ciudad">Ciudad/Alcaldía *</label>
+                                    <select id="ciudad" name="ciudad" required disabled>
+                                        <option value="">Primero selecciona un estado</option>
+                                    </select>
+                                    <span class="error-message" id="error-ciudad"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="codigo-postal">Código Postal *</label>
+                                    <input 
+                                        type="text" 
+                                        id="codigo-postal" 
+                                        name="codigo-postal" 
+                                        required 
+                                        placeholder="01234"
+                                        pattern="[0-9]{5}"
+                                        minlength="5"
+                                        maxlength="5"
+                                        title="Ingresa 5 dígitos">
+                                    <span class="error-message" id="error-codigo-postal"></span>
                                 </div>
                             </div>
                         </div>
@@ -93,6 +178,7 @@
                                 <div class="form-group">
                                     <label for="fecha">Fecha del Evento *</label>
                                     <input type="date" id="fecha" name="fecha" required>
+                                    <span class="error-message" id="error-fecha"></span>
                                 </div>
                                 <div class="form-group">
                                     <label for="horario">Horario *</label>
@@ -102,6 +188,7 @@
                                         <option value="tarde">Tarde (14:00 - 19:00)</option>
                                         <option value="dia-completo">Día Completo (9:00 - 19:00)</option>
                                     </select>
+                                    <span class="error-message" id="error-horario"></span>
                                 </div>
                             </div>
                             <div class="form-row">
@@ -116,10 +203,18 @@
                                         <option value="reunion-familiar">Reunión Familiar</option>
                                         <option value="otro">Otro</option>
                                     </select>
+                                    <span class="error-message" id="error-tipo-evento"></span>
                                 </div>
                                 <div class="form-group">
                                     <label for="num-ninos">Número de Niños</label>
-                                    <input type="number" id="num-ninos" name="num-ninos" min="1" placeholder="Ej: 15">
+                                    <input 
+                                        type="number" 
+                                        id="num-ninos" 
+                                        name="num-ninos" 
+                                        min="1" 
+                                        max="100"
+                                        placeholder="Ej: 15">
+                                    <span class="error-message" id="error-num-ninos"></span>
                                 </div>
                             </div>
                         </div>
@@ -138,20 +233,89 @@
                                     <option value="tobogan-acuatico">Tobogán Acuático - $650/día</option>
                                     <option value="no-seguro">No estoy seguro</option>
                                 </select>
+                                <span class="error-message" id="error-producto"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Dirección del Evento</h3>
+                            <p style="color: var(--gray); margin-bottom: 1rem; font-size: 0.9rem;">
+                                El estado, ciudad y código postal se tomarán de tu información personal. 
+                                Solo completa los detalles específicos de la dirección.
+                            </p>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="calle">Calle *</label>
+                                    <input 
+                                        type="text" 
+                                        id="calle" 
+                                        name="calle" 
+                                        required 
+                                        placeholder="Av. Insurgentes Sur"
+                                        minlength="3"
+                                        maxlength="100">
+                                    <span class="error-message" id="error-calle"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="numero">Número Exterior *</label>
+                                    <input 
+                                        type="text" 
+                                        id="numero" 
+                                        name="numero" 
+                                        required 
+                                        placeholder="123"
+                                        maxlength="10">
+                                    <span class="error-message" id="error-numero"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="numero-interior">Número Interior (opcional)</label>
+                                    <input 
+                                        type="text" 
+                                        id="numero-interior" 
+                                        name="numero-interior" 
+                                        placeholder="Depto. 5, Piso 3, etc."
+                                        maxlength="20">
+                                </div>
+                                <div class="form-group">
+                                    <label for="colonia">Colonia *</label>
+                                    <input 
+                                        type="text" 
+                                        id="colonia" 
+                                        name="colonia" 
+                                        required 
+                                        placeholder="Del Valle"
+                                        minlength="3"
+                                        maxlength="50">
+                                    <span class="error-message" id="error-colonia"></span>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="direccion">Dirección del Evento *</label>
-                                <textarea id="direccion" name="direccion" rows="3" required placeholder="Calle, número, colonia, código postal"></textarea>
+                                <label for="referencias">Referencias de ubicación</label>
+                                <textarea 
+                                    id="referencias" 
+                                    name="referencias" 
+                                    rows="2" 
+                                    placeholder="Entre qué calles, cerca de qué lugar, color de la casa, etc."
+                                    maxlength="200"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="comentarios">Comentarios Adicionales</label>
-                                <textarea id="comentarios" name="comentarios" rows="4" placeholder="Cualquier información adicional que quieras compartir..."></textarea>
+                                <textarea 
+                                    id="comentarios" 
+                                    name="comentarios" 
+                                    rows="4" 
+                                    placeholder="Cualquier información adicional que quieras compartir..."
+                                    maxlength="500"></textarea>
+                                <span class="char-counter" id="contador-comentarios">0/500 caracteres</span>
                             </div>
                         </div>
 
                         <div class="form-check">
                             <input type="checkbox" id="terminos" name="terminos" required>
                             <label for="terminos">Acepto los términos y condiciones de servicio *</label>
+                            <span class="error-message" id="error-terminos"></span>
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-large">Enviar Reserva</button>
