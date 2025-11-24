@@ -103,17 +103,44 @@
                     <form id="form-contacto" class="contacto-form">
                         <div class="form-group">
                             <label for="nombre">Nombre Completo *</label>
-                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                            <input 
+                                type="text" 
+                                id="nombre" 
+                                name="nombre" 
+                                required 
+                                placeholder="Tu nombre"
+                                minlength="3"
+                                maxlength="50"
+                                pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+"
+                                title="Solo letras y espacios">
+                            <span class="error-message" id="error-nombre"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required 
+                                placeholder="tu@email.com"
+                                maxlength="100">
+                            <span class="error-message" id="error-email"></span>
                         </div>
 
                         <div class="form-group">
-                            <label for="telefono">Teléfono *</label>
-                            <input type="tel" id="telefono" name="telefono" required placeholder="(55) 1234-5678">
+                            <label for="telefono">Teléfono (10 dígitos) *</label>
+                            <input 
+                                type="tel" 
+                                id="telefono" 
+                                name="telefono" 
+                                required 
+                                placeholder="5512345678"
+                                pattern="[0-9]{10}"
+                                minlength="10"
+                                maxlength="10"
+                                title="Ingresa 10 dígitos sin espacios ni guiones">
+                            <span class="error-message" id="error-telefono"></span>
                         </div>
 
                         <div class="form-group">
@@ -127,11 +154,21 @@
                                 <option value="queja">Queja o Sugerencia</option>
                                 <option value="otro">Otro</option>
                             </select>
+                            <span class="error-message" id="error-asunto"></span>
                         </div>
 
                         <div class="form-group">
-                            <label for="mensaje">Mensaje *</label>
-                            <textarea id="mensaje" name="mensaje" rows="6" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                            <label for="mensaje">Mensaje (mínimo 10 caracteres) *</label>
+                            <textarea 
+                                id="mensaje" 
+                                name="mensaje" 
+                                rows="6" 
+                                required 
+                                placeholder="Escribe tu mensaje aquí..."
+                                minlength="10"
+                                maxlength="500"></textarea>
+                            <span class="char-counter" id="contador-mensaje">0/500 caracteres</span>
+                            <span class="error-message" id="error-mensaje"></span>
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-large">Enviar Mensaje</button>

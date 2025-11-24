@@ -139,3 +139,44 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 console.log('🛒 Catálogo de inflables cargado correctamente');
+
+/**
+ * Función para ver detalles del producto
+ * 
+ * @param {number} id - ID del producto en la base de datos
+ */
+function verDetalles(id) {
+    // TODO: Implementar consulta a base de datos
+    // TODO: Crear página dinámica de detalles que reciba el ID
+    // TODO: Mostrar información completa del producto
+    
+    console.log(`📦 Producto seleccionado - ID: ${id}`);
+    
+    // Por ahora, mostrar un mensaje informativo
+    alert(`Función en desarrollo.\n\nEn el futuro, aquí se mostrará la información completa del producto #${id} consultada desde la base de datos.`);
+    
+    // window.location.href = `producto-detalle.html?id=${id}`;
+    // O abrir modal con AJAX:
+    // cargarDetallesProducto(id);
+}
+
+/**
+ * 
+ * Esta función consultará la API/BD y mostrará los detalles
+ */
+async function cargarDetallesProducto(id) {
+    // TODO: Implementar cuando se conecte con backend
+    /*
+    try {
+        const response = await fetch(`/api/productos/${id}`);
+        const producto = await response.json();
+        
+        // Mostrar en modal o redirigir a página de detalles
+        mostrarModalDetalles(producto);
+        
+    } catch (error) {
+        console.error('Error al cargar producto:', error);
+        alert('Error al cargar los detalles del producto');
+    }
+    */
+}
