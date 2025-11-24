@@ -152,27 +152,32 @@ a {
 }
 
 .btn-secondary {
-    background-color: transparent;
-    color: var(--white);
-    border: 2px solid var(--white);
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: 3px solid var(--white);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .btn-secondary:hover {
-    background-color: var(--white);
-    color: var(--primary-color);
+    background-color: transparent;
+    color: var(--white);
+    border: 3px solid var(--white);
     transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
 }
 
 .btn-whatsapp {
     background-color: #25d366;
     color: var(--white);
+    font-weight: 700;
 }
 
 .btn-whatsapp:hover {
     background-color: #20ba5a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
 }
 
 .btn-small {
@@ -242,6 +247,11 @@ a {
 
 .footer-col ul li {
     margin-bottom: 0.5rem;
+}
+
+.footer-col ul li i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
 }
 
 .footer-col a:hover {

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contáctanos - Estamos aquí para ayudarte con tu evento">
+    <title>Contacto - Elastic rental</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/contacto.css">
+</head>
+<body>
+    <!-- Header Component -->
+    <div id="header-container"></div>
+
+    <!-- Hero Contacto -->
+    <section class="contacto-hero">
+        <div class="container">
+            <h1>Contáctanos</h1>
+            <p>Estamos aquí para ayudarte. Comunícate con nosotros</p>
+        </div>
+    </section>
+
+    <!-- Información de Contacto -->
+    <section class="info-contacto">
+        <div class="container">
+            <div class="contacto-grid">
+                <!-- Información -->
+                <div class="contacto-info">
+                    <h2>Información de Contacto</h2>
+                    <p>Estamos disponibles para responder todas tus preguntas y ayudarte a planear el evento perfecto.</p>
+
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="bi bi-telephone-fill"></i>
+                            </div>
+                            <div class="info-texto">
+                                <h3>Teléfono</h3>
+                                <p>(55) 1234-5678</p>
+                                <p class="horario">Lun - Dom: 8:00 AM - 8:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <div class="info-texto">
+                                <h3>WhatsApp</h3>
+                                <p>(55) 1234-5678</p>
+                                <a href="https://wa.me/5215512345678" class="btn btn-whatsapp" target="_blank">Enviar mensaje</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="bi bi-envelope-fill"></i>
+                            </div>
+                            <div class="info-texto">
+                                <h3>Email</h3>
+                                <p>info@elasticrent.com</p>
+                                <p class="horario">Respuesta en menos de 24 hrs</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+                            <div class="info-texto">
+                                <h3>Ubicación</h3>
+                                <p>Ciudad de México</p>
+                                <p class="horario">Servicio a domicilio en toda la CDMX y área metropolitana</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="bi bi-clock-fill"></i>
+                            </div>
+                            <div class="info-texto">
+                                <h3>Horario de Atención</h3>
+                                <p>Lunes a Viernes: 8:00 AM - 8:00 PM</p>
+                                <p>Sábado y Domingo: 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="redes-sociales">
+                        <h3>Síguenos en Redes Sociales</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-btn facebook">Facebook</a>
+                            <a href="#" class="social-btn instagram">Instagram</a>
+                            <a href="#" class="social-btn tiktok">TikTok</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Contacto -->
+                <div class="formulario-contacto">
+                    <h2>Envíanos un Mensaje</h2>
+                    <form id="form-contacto" class="contacto-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo *</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono" required placeholder="(55) 1234-5678">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="asunto">Asunto *</label>
+                            <select id="asunto" name="asunto" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="cotizacion">Solicitar Cotización</option>
+                                <option value="reserva">Hacer una Reserva</option>
+                                <option value="informacion">Información General</option>
+                                <option value="cancelacion">Cancelación/Cambio de Fecha</option>
+                                <option value="queja">Queja o Sugerencia</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" rows="6" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preguntas Frecuentes -->
+    <section class="faq-preview">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>¿Con cuánta anticipación debo reservar?</h3>
+                    <p>Recomendamos reservar con al menos 1-2 semanas de anticipación, especialmente en temporada alta (verano y diciembre).</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Incluyen instalación y retiro?</h3>
+                    <p>Sí, todos nuestros servicios incluyen entrega, instalación profesional y retiro sin costo adicional.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Qué medidas de seguridad tienen?</h3>
+                    <p>Todos nuestros inflables están certificados, se desinfectan después de cada uso y cumplan con normas de seguridad.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Qué pasa si llueve?</h3>
+                    <p>Puedes cambiar la fecha sin costo adicional con 48 horas de anticipación. Consulta nuestras políticas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-container"></div>
+
+    <script src="../../js/components.js"></script>
+    <script src="../../js/contacto.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

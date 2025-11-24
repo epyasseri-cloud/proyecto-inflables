@@ -1,0 +1,274 @@
+/* ===== HERO CONTACTO ===== */
+.contacto-hero {
+    background: var(--gradient-orange);
+    color: var(--white);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.contacto-hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.contacto-hero p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+/* ===== INFO CONTACTO ===== */
+.info-contacto {
+    padding: 3rem 0;
+    background-color: var(--light-color);
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+/* Información */
+.contacto-info {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.contacto-info h2 {
+    color: var(--dark-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.contacto-info > p {
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.info-items {
+    margin-bottom: 2rem;
+}
+
+.info-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--light-color);
+}
+
+.info-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.info-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+    color: var(--primary-color);
+}
+
+.info-icon i {
+    display: block;
+}
+
+.info-texto h3 {
+    color: var(--dark-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.info-texto p {
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+}
+
+.horario {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.info-texto .btn {
+    margin-top: 0.5rem;
+    padding: 8px 20px;
+}
+
+/* Redes Sociales */
+.redes-sociales {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--light-color);
+}
+
+.redes-sociales h3 {
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.social-btn.facebook {
+    background-color: #1877f2;
+    color: white;
+}
+
+.social-btn.instagram {
+    background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+    color: white;
+}
+
+.social-btn.tiktok {
+    background-color: #000000;
+    color: white;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+/* Formulario Contacto */
+.formulario-contacto {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.formulario-contacto h2 {
+    color: var(--dark-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.contacto-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contacto-form label {
+    display: block;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.contacto-form input,
+.contacto-form select,
+.contacto-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--light-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.contacto-form input:focus,
+.contacto-form select:focus,
+.contacto-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.1);
+}
+
+.contacto-form textarea {
+    resize: vertical;
+    font-family: inherit;
+}
+
+/* ===== FAQ PREVIEW ===== */
+.faq-preview {
+    padding: 4rem 0;
+    background-color: var(--white);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.faq-item {
+    padding: 2rem;
+    background-color: var(--light-color);
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.faq-item h3 {
+    color: var(--dark-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.faq-item p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacto-hero h1 {
+        font-size: 2rem;
+    }
+
+    .contacto-info,
+    .formulario-contacto {
+        padding: 1.5rem;
+    }
+
+    .info-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        flex-direction: column;
+    }
+
+    .social-btn {
+        width: 100%;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}

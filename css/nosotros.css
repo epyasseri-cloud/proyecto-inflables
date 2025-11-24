@@ -1,0 +1,250 @@
+/* ===== HERO NOSOTROS ===== */
+.nosotros-hero {
+    background: var(--gradient-orange);
+    color: var(--white);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.nosotros-hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nosotros-hero p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+/* ===== NUESTRA HISTORIA ===== */
+.nuestra-historia {
+    padding: 4rem 0;
+    background-color: var(--white);
+}
+
+.historia-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.historia-texto h2 {
+    color: var(--dark-color);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.historia-texto p {
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.historia-imagen img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    background-color: var(--light-color);
+    height: 400px;
+    object-fit: cover;
+}
+
+/* ===== MISIÓN Y VISIÓN ===== */
+.mision-vision {
+    padding: 4rem 0;
+    background-color: var(--light-color);
+}
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.valor-card {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.valor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.valor-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.valor-icon i {
+    display: block;
+}
+
+.valor-card h3 {
+    color: var(--dark-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.valor-card p {
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+.valor-card ul {
+    list-style: none;
+    text-align: left;
+}
+
+.valor-card ul li {
+    color: var(--text-color);
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.valor-card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* ===== POR QUÉ ELEGIRNOS ===== */
+.por-que-elegirnos {
+    padding: 4rem 0;
+    background-color: var(--white);
+}
+
+.razones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.razon-item {
+    padding: 2rem;
+    border-left: 4px solid var(--primary-color);
+    background-color: var(--light-color);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.razon-item:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow);
+}
+
+.razon-numero {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.razon-item h3 {
+    color: var(--dark-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.razon-item p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* ===== ESTADÍSTICAS ===== */
+.estadisticas {
+    background: var(--gradient-dark);
+    padding: 3rem 0;
+    color: var(--white);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.stat-numero {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-texto {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ===== CTA ===== */
+.nosotros-cta {
+    background: var(--gradient-orange);
+    color: var(--white);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.nosotros-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.nosotros-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .nosotros-hero h1 {
+        font-size: 2rem;
+    }
+
+    .historia-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .historia-imagen {
+        order: -1;
+    }
+
+    .valores-grid,
+    .razones-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-numero {
+        font-size: 2.5rem;
+    }
+
+    .nosotros-cta h2 {
+        font-size: 1.8rem;
+    }
+}
+
+#boton1 {
+    margin-top: 1rem;
+    
+}

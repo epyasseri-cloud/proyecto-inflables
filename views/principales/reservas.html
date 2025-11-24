@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reserva tu inflable - Formulario de reservación fácil y rápido">
+    <title>Reservas - Elastic rental</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/reservas.css">
+</head>
+<body>
+    <!-- Header Component -->
+    <div id="header-container"></div>
+
+    <!-- Hero Reservas -->
+    <section class="reservas-hero">
+        <div class="container">
+            <h1>Haz tu Reserva</h1>
+            <p>Completa el formulario y asegura tu inflable para la fecha deseada</p>
+        </div>
+    </section>
+
+    <!-- Formulario de Reservas -->
+    <section class="formulario-reservas">
+        <div class="container">
+            <div class="reservas-contenido">
+                <!-- Información lateral -->
+                <div class="reservas-info">
+                    <h2>Proceso de Reserva</h2>
+                    <div class="paso">
+                        <div class="paso-numero">1</div>
+                        <div class="paso-texto">
+                            <h3>Completa el formulario</h3>
+                            <p>Ingresa tus datos y el inflable que deseas</p>
+                        </div>
+                    </div>
+                    <div class="paso">
+                        <div class="paso-numero">2</div>
+                        <div class="paso-texto">
+                            <h3>Confirmación</h3>
+                            <p>Te contactaremos en menos de 1 hora</p>
+                        </div>
+                    </div>
+                    <div class="paso">
+                        <div class="paso-numero">3</div>
+                        <div class="paso-texto">
+                            <h3>Entrega e instalación</h3>
+                            <p>Llevamos y montamos todo el día del evento</p>
+                        </div>
+                    </div>
+
+                    <div class="info-adicional">
+                        <h3> ¿Necesitas ayuda?</h3>
+                        <p>Llámanos: (55) 1234-5678</p>
+                        <p>WhatsApp: (55) 1234-5678</p>
+                        <p>Email: info@elasticrent.com</p>
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <div class="formulario-container">
+                    <form id="form-reserva" class="reserva-form">
+                        <h2>Datos de la Reserva</h2>
+
+                        <div class="form-section">
+                            <h3>Información Personal</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nombre">Nombre Completo *</label>
+                                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefono">Teléfono *</label>
+                                    <input type="tel" id="telefono" name="telefono" required placeholder="(55) 1234-5678">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ciudad">Ciudad *</label>
+                                    <input type="text" id="ciudad" name="ciudad" required placeholder="Ciudad de México">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Detalles del Evento</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fecha">Fecha del Evento *</label>
+                                    <input type="date" id="fecha" name="fecha" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="horario">Horario *</label>
+                                    <select id="horario" name="horario" required>
+                                        <option value="">Selecciona un horario</option>
+                                        <option value="manana">Mañana (9:00 - 14:00)</option>
+                                        <option value="tarde">Tarde (14:00 - 19:00)</option>
+                                        <option value="dia-completo">Día Completo (9:00 - 19:00)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="tipo-evento">Tipo de Evento *</label>
+                                    <select id="tipo-evento" name="tipo-evento" required>
+                                        <option value="">Selecciona el tipo</option>
+                                        <option value="cumpleanos">Cumpleaños</option>
+                                        <option value="bautizo">Bautizo</option>
+                                        <option value="primera-comunion">Primera Comunión</option>
+                                        <option value="graduacion">Graduación</option>
+                                        <option value="reunion-familiar">Reunión Familiar</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="num-ninos">Número de Niños</label>
+                                    <input type="number" id="num-ninos" name="num-ninos" min="1" placeholder="Ej: 15">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Selección de Producto</h3>
+                            <div class="form-group">
+                                <label for="producto">Inflable/Producto *</label>
+                                <select id="producto" name="producto" required>
+                                    <option value="">Selecciona un producto</option>
+                                    <option value="castillo-saltarin">Castillo Saltarín - $500/día</option>
+                                    <option value="trampolin-happy">Trampolín Happy - $400/día</option>
+                                    <option value="tobogan-aventura">Tobogán Aventura - $700/día</option>
+                                    <option value="castillo-princesas">Castillo Princesas - $600/día</option>
+                                    <option value="combo-fiesta">Combo Fiesta Total - $850/día</option>
+                                    <option value="tobogan-acuatico">Tobogán Acuático - $650/día</option>
+                                    <option value="no-seguro">No estoy seguro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="direccion">Dirección del Evento *</label>
+                                <textarea id="direccion" name="direccion" rows="3" required placeholder="Calle, número, colonia, código postal"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="comentarios">Comentarios Adicionales</label>
+                                <textarea id="comentarios" name="comentarios" rows="4" placeholder="Cualquier información adicional que quieras compartir..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" id="terminos" name="terminos" required>
+                            <label for="terminos">Acepto los términos y condiciones de servicio *</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">Enviar Reserva</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-container"></div>
+
+    <script src="../../js/components.js"></script>
+    <script src="../../js/reservas.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>
